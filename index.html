@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test</title>
+	<style>
+		body{
+			font-family: sans-serif;
+			padding: 40px;
+		}
+		span{
+			color: var(--color);
+		}
+		.color{
+			--color: red;
+		}
+	</style>
+</head>
+<body>
+	<div class="color"><span>Some text</span></div>
+	<span>Lorem ipsum dolor sit amet.</span>
+</body>
+	<script>
+		var element = document.querySelector('.color');
+		var styles = getComputedStyle(element);
+		var value = styles.getPropertyValue('--color');
+
+		alert(value);
+	</script>
+</html>
